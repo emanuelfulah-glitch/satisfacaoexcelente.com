@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Equipamentos Informáticos</title>
+    
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172554;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 12px;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 0;
+            line-height: 1.6;
+            color: #dbeafe;
+        }
+
+        .catalogo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 20px 50px;
+        }
+
+        .catalogo h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        .equipamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .equipamento-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .equipamento-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .equipamento-card img {
+            width: 100%;
+            height: 210px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .equipamento-info {
+            padding: 18px;
+        }
+
+        .equipamento-info h3 {
+            margin: 0 0 10px;
+            font-size: 19px;
+            color: #172554;
+        }
+
+        .equipamento-info p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 22px;
+            background: #172554;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .voltar:hover {
+            background: #2563eb;
+        }
+
+        .rodape {
+            text-align: center;
+            padding: 22px;
+            background: #172554;
+            color: white;
+        }
+
+        @media (max-width: 850px) {
+            .equipamentos-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            .equipamentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+        }
+        
+/* ETIQUETA DE STOCK - CORRIGIDA */
+.equipamento-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.etiqueta-stock {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    background-color: #16803d !important;
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Produto esgotado */
+.etiqueta-stock.esgotado {
+    background-color: #c62828 !important;
+    color: #ffffff !important;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>💻 Equipamentos Informáticos</h1>
+        <p>
+            Conheça os nossos equipamentos e soluções tecnológicas
+            para empresas e particulares.
+        </p>
+    </header>
+
+    <main class="catalogo">
+
+        <h2>Os Nossos Equipamentos</h2>
+
+        <div class="equipamentos-grid">
+
+            <article class="equipamento-card">
+                  <span class="etiqueta-stock">✓ STOCK DISPONIVÉL</span>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+                     alt="Computador portátil">
+                <div class="equipamento-info">
+                    <h3>Computadores Portáteis</h3>
+                    <p>Portáteis para empresas, estudantes, escritórios e uso pessoal.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=600&q=80"
+                     alt="Computador de secretária">
+                <div class="equipamento-info">
+                    <h3>Computadores Desktop</h3>
+                    <p>Computadores de secretária para trabalho, gestão e produtividade.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80"
+                     alt="Monitor de computador">
+                <div class="equipamento-info">
+                    <h3>Monitores</h3>
+                    <p>Ecrãs para computadores, escritórios, formação e entretenimento.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock esgotado">
+    ✕ ESGOTADO
+</span>
+                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+                     alt="Impressora">
+                <div class="equipamento-info">
+                    <h3>Impressoras</h3>
+                    <p>Equipamentos para impressão de documentos e trabalhos profissionais.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80"
+                     alt="Rato de computador">
+                <div class="equipamento-info">
+                    <h3>Ratos Informáticos</h3>
+                    <p>Ratos com e sem fios para utilização diária e profissional.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
+                     alt="Teclado de computador">
+                <div class="equipamento-info">
+                    <h3>Teclados</h3>
+                    <p>Teclados para computadores de secretária e portáteis.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                 <span class="etiqueta-stock esgotado">
+        ✕ ESGOTADO
+    </span>
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80"
+                     alt="Equipamentos de rede">
+                <div class="equipamento-info">
+                    <h3>Routers e Switches</h3>
+                    <p>Soluções de rede para ligar computadores e partilhar a Internet.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80"
+     alt="Disco SSD e armazenamento informático">
+                <div class="equipamento-info">
+                    <h3>Discos HDD e SSD</h3>
+                    <p>Dispositivos de armazenamento para guardar ficheiros e melhorar computadores.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1601524909162-ae8725290836?auto=format&fit=crop&w=600&q=80"
+                     alt="Acessórios informáticos">
+                <div class="equipamento-info">
+                    <h3>Acessórios Informáticos</h3>
+                    <p>Cabos, adaptadores, pens USB e outros acessórios tecnológicos.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                 <span class="etiqueta-stock esgotado">
+        ✕ ESGOTADO
+    </span>
+                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+                     alt="Colunas de som">
+                <div class="equipamento-info">
+                    <h3>Colunas de Som</h3>
+                    <p>Equipamentos de áudio para computadores, reuniões e apresentações.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80"
+                     alt="Auscultadores">
+                <div class="equipamento-info">
+                    <h3>Auscultadores e Headsets</h3>
+                    <p>Equipamentos para comunicação, reuniões online e utilização diária.</p>
+                </div>
+            </article>
+
+            <article class="equipamento-card">
+                <span class="etiqueta-stock">✓ STOCK DISPONÍVEL</span>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                     alt="Estação de trabalho informática">
+                <div class="equipamento-info">
+                    <h3>Equipamentos para Escritório</h3>
+                    <p>Soluções informáticas para equipar empresas e espaços de trabalho.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="voltar">← Voltar à página inicial</a>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Equipamentos Informáticos | Soluções Tecnológicas</p>
+    </footer>
+
+</body>
+</html>
